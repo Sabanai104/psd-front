@@ -7,6 +7,7 @@ import { GatewayServices } from "../Services/GatewayServices";
 const Home = () => {
     const [words, setWords] = useState([]);
     const [label, setLabel] = useState("");
+    const [update, setUpdate] = useState(false);
     const gatewayServices = new GatewayServices()
 
     useEffect(() => {
@@ -25,8 +26,8 @@ const Home = () => {
             <Input
                 label={label}
                 onChange={e => setLabel(e.target.value)}
-                words={words}
-                setWords={setWords}
+                update={update}
+                setUpdate={setUpdate}
             />
 
             <div className="home-list-container">
@@ -34,7 +35,8 @@ const Home = () => {
                 {
                     !!words.length && words.map((item) => (
                         <div key={item.word} className="home-list-item-container">
-                            {item.word}
+                            <p className="home-list-word">{item.word}</p>
+                            <p className="home-list-count">{item.count}</p>
                         </div>
                         )
                     )

@@ -2,12 +2,12 @@ import "./Input.css"
 import React from "react";
 import {GatewayServices} from "../../Services/GatewayServices";
 
-export const Input = ({label, onChange, setWords, words}) => {
+export const Input = ({label, onChange}) => {
     const gatewayService = new GatewayServices()
     const sendWord = async () => {
         if(label !== "") {
             gatewayService.putWord(label)
-            setWords([...words, {word: label, count: 0}])
+            window.location.reload();
         }
     }
 
