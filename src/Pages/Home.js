@@ -31,7 +31,7 @@ const Home = () => {
             />
 
             <div className="home-list-container">
-                <p className="home-list-title">Lista de sla o que</p>
+                <p className="home-list-title">Lista de palavras</p>
                 {
                     !!words.length && words.map((item) => (
                         <div key={item.word} className="home-list-item-container">

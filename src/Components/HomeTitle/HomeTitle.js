@@ -8,10 +8,10 @@ export const HomeTitle = () => {
             <div className="home-title-info-container">
                 <div>
                     <p className="home-title">
-                        Lorem, ipsum dolor sit ametad
+                        Dicionário de Palavras
                     </p>
                     <p className="home-subtitle">
-                        Escreva algo abaixo bla bla bla para que bla bla bla
+                        Escreva uma palavra abaixo e veja ela aparecendo na lista!
                     </p>
                 </div>
                 <p className="home-assignes">
